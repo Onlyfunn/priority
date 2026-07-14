@@ -44,7 +44,7 @@ $mainColor: #576283;
   font-weight: 400;
 }
 
-$NTSomicRegulal: "NTSomicRegulal";
+$NTSomicRegulal: "NTSomic Regular";
 $NTSomicMedium: "NTSomic Medium";
 $Uncage: "Uncage";
 $StozlBold: "Stozl bold";
@@ -83,11 +83,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding-top: env(safe-area-inset-top, 44px);
+  padding-top: max(44px, env(safe-area-inset-top));
 }
 
 .save-place {
-  padding-top: env(safe-area-inset-top, 44px);
+  padding-top: max(44px, env(safe-area-inset-top));
   position: fixed;
   z-index: 100;
   top: 0;
@@ -166,6 +166,8 @@ div[class*="__container"] {
   // .header__logo
 
   &__logo {
+    width: 85px;
+    height: 20px;
   }
 
   // .header__notification
@@ -455,5 +457,278 @@ div[class*="__container"] {
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+-----------------------------------ABOUT---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.about {
+  margin-bottom: 13px;
+  // .about__container
+
+  &__container {
+  }
+
+  // .about__title
+
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  // .about__body
+
+  &__body {
+    display: flex;
+    gap: 13px;
+  }
+
+  // .about__item
+
+  &__item {
+    flex: 0 0 50%;
+    min-height: 94px;
+    padding: 14.14px;
+    border-radius: 11px;
+    background-color: #f8f9fc;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &:first-child {
+      .about__text {
+        max-width: 75px;
+      }
+      .about__num {
+        position: absolute;
+        bottom: 2px;
+        right: -5px;
+      }
+      .about__car {
+        top: -51px;
+        right: -18px;
+        transform: rotate(180deg);
+        width: 111px;
+      }
+    }
+    &:last-child {
+      align-items: end;
+      .about__car {
+        top: 0px;
+        right: auto;
+        left: 0;
+        width: 89px;
+      }
+      .about__num {
+        font-size: 32.84px;
+        line-height: 100%;
+      }
+      .about__text {
+        text-align: right;
+      }
+    }
+  }
+
+  // .about__num
+
+  &__num {
+    font-family: $Uncage;
+    font-weight: 700;
+    color: #202d56;
+    letter-spacing: 0%;
+    font-size: 38.31px;
+  }
+
+  // .about__text
+
+  &__text {
+    font-family: $NTSomicRegulal;
+    font-weight: 400;
+    color: #798097;
+    font-size: 7.66px;
+    max-width: 56px;
+    line-height: 120%;
+  }
+
+  // .about__car
+
+  &__car {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+-------------------------------------REVIEW---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.review {
+  margin-bottom: 87px;
+  // .review__contatiner
+
+  &__contatiner {
+  }
+
+  // .review__body
+
+  &__body {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #3f5ea7;
+    position: relative;
+    min-height: 81px;
+    padding: 9px 11px 9px 27px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  // .review__bg
+
+  &__bg {
+    z-index: -1;
+    width: 34%;
+  }
+
+  // .review__numbers
+
+  &__numbers {
+    padding-top: 0;
+    padding-left: 0;
+    flex: 1 1 auto;
+  }
+
+  // .review__evaluation
+
+  &__evaluation {
+    font-family: $Uncage;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 120%;
+    letter-spacing: -1%;
+    color: #fff;
+  }
+
+  // .review__counts
+
+  &__counts {
+    font-family: $NTSomicMedium;
+    font-weight: 500;
+    display: inline-block;
+    padding: 4.49px;
+    border-radius: 7.86px;
+    line-height: 100%;
+    letter-spacing: -1%;
+    position: relative;
+    top: -22px;
+    left: 30.39px;
+    background-color: #4875de;
+    color: #fff;
+  }
+
+  // .review__stars
+
+  &__stars {
+    display: flex;
+    gap: 1px;
+
+    margin-top: -20px;
+    margin-left: 31.39px;
+  }
+
+  // .review__star
+
+  &__star {
+  }
+
+  // .review__texts
+
+  &__texts {
+    flex: 0 1 165px;
+    margin-top: 9px;
+  }
+
+  // .review__text
+
+  &__text {
+    font-family: $StozlBook;
+    font-weight: 400;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: 13.37px;
+    font-size: 9.86px;
+  }
+
+  // .review__review
+
+  &__review {
+    font-family: $StozlBold;
+    font-weight: 700;
+    line-height: 120%;
+    font-size: 9.24px;
+    text-decoration: underline;
+    color: #fff;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+--------------------------------FOOTER---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.footer {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  bottom: 15px;
+
+  // .footer__container
+
+  &__container {
+  }
+
+  // .footer__body
+
+  &__body {
+    width: 100%;
+    height: 43px;
+    padding: 0 20px;
+    border-radius: 21.5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+
+  // .footer__item
+
+  &__item {
+    &:not(:nth-child(3)) {
+      border-radius: 50%;
+    }
+    &:nth-child(3) {
+      margin-top: -17px;
+      margin-left: 8px;
+    }
+    &:nth-child(2) {
+      position: relative;
+      left: 13px;
+    }
+    &:nth-child(4) {
+      position: relative;
+      left: -10px;
+    }
+    &:nth-child(5) {
+      position: relative;
+      left: -4px;
+    }
+  }
+  &__bg {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 }

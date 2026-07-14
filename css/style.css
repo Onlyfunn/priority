@@ -57,15 +57,24 @@ body {
   font-size: 8px;
   line-height: 120%;
   color: #576283;
-  background: blue;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding-top: env(safe-area-inset-top);
-  background: red;
+  padding-top: max(16px, env(safe-area-inset-top));
+}
+
+.save-place {
+  padding-top: max(16px, env(safe-area-inset-top));
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 .main {
@@ -172,6 +181,8 @@ div[class*=__container] {
   border-radius: 20.62px;
   overflow: hidden;
   padding: 11px 11px 11px 14px;
+  display: flex;
+  flex-direction: column;
 }
 .item-model__header {
   display: flex;
@@ -190,6 +201,7 @@ div[class*=__container] {
   margin-bottom: 3px;
   line-height: 105%;
   letter-spacing: -2%;
+  margin-top: auto;
 }
 .item-model__footer {
   display: flex;

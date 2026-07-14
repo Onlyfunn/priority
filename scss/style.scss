@@ -72,10 +72,11 @@ body {
 
 .body {
   font-family: $StozlMedium;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 8px;
   line-height: 120%;
   color: $mainColor;
+  background: blue;
 }
 
 .wrapper {
@@ -83,6 +84,7 @@ body {
   flex-direction: column;
   min-height: 100svh;
   padding-top: env(safe-area-inset-top);
+  background: red;
 }
 
 .main {
@@ -209,5 +211,92 @@ div[class*="__container"] {
   // .calculate__bg
 
   &__bg {
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+--------------------------------------MODELS---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.models {
+  margin-bottom: 29px;
+  // .models__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  // .models__item
+
+  &__item {
+  }
+}
+.item-model {
+  background-color: #f7f8fa;
+  border-radius: 20.62px;
+  overflow: hidden;
+  padding: 11px 11px 11px 14px;
+  // .item-model__header
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+  }
+
+  // .item-model__model
+
+  &__model {
+    width: 27px;
+    height: 27px;
+    margin-top: 5px;
+  }
+
+  // .item-model__car
+
+  &__car {
+  }
+
+  // .item-model__title
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222e53;
+    margin-bottom: 3px;
+    line-height: 105%;
+    letter-spacing: -2%;
+  }
+
+  // .item-model__footer
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .item-model__text
+
+  &__text {
+    font-family: $StozlBook;
+    font-weight: 400;
+    line-height: 132%;
+    letter-spacing: -2%;
+    max-width: 93px;
+  }
+
+  // .item-model__arrow
+
+  &__arrow {
+    display: block;
+    min-width: 21px;
+    min-height: 22px;
+
+    &:active svg use path {
+      fill: red;
+    }
   }
 }

@@ -64,11 +64,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding-top: env(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top, 44px);
 }
 
 .save-place {
-  padding-top: env(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top, 44px);
   position: fixed;
   z-index: 100;
   top: 0;

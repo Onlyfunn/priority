@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -185,7 +189,42 @@
             </div>
           </div>
         </section>
-        <section class="news"></section>
+        <section class="news">
+          <div class="news__container">
+            <div class="news__header">
+              <h1 class="news__title title">Новости и акции</h1>
+              <a href="#" class="news__all">Смотреть все</a>
+            </div>
+            <div class="news__swiper swiper-news swiper">
+              <div class="swiper-news__wrapper swiper-wrapper">
+                <div class="swiper-news__slide slide-news swiper-slide">
+                  <img
+                    src="img/news/bg.jpg"
+                    alt=""
+                    class="slide-news__image _bgi"
+                  />
+                </div>
+                <div class="swiper-news__slide slide-news swiper-slide">
+                  <img
+                    src="img/news/bg.jpg"
+                    alt=""
+                    class="slide-news__image _bgi"
+                  />
+                </div>
+                <div class="swiper-news__slide slide-news swiper-slide">
+                  <img
+                    src="img/news/bg.jpg"
+                    alt=""
+                    class="slide-news__image _bgi"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-news__buttons">
+              <div class="swiper-news__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
         <section class="loyal">
           <div class="loyal__container">
             <div class="loyal__body">
@@ -449,11 +488,13 @@
             <a href="#" class="footer__item">
               <img src="img/footer/profile.png" width="34" height="34" alt="" />
             </a>
-            <img src="img/footer/shadow.png" class=".footer__bg _bgi" alt="" />
           </div>
+          <img src="img/footer/shadow.png" class="footer__bg _bgi" alt="" />
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <script src="js/script.js"></script>
   </body>
 </html>

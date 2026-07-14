@@ -62,7 +62,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100svh;
   padding-top: env(safe-area-inset-top);
 }
 
@@ -76,6 +76,31 @@ div[class*=__container] {
   padding: 0px 20px;
 }
 
+._bgi {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.button {
+  display: inline-flex;
+  line-height: 31px;
+  padding: 0 15.5px;
+  background: linear-gradient(#6b97d6, #4e7aba);
+  border-radius: 60px;
+  color: #fff;
+  font-size: 6px;
+  text-transform: uppercase;
+  letter-spacing: 8%;
+}
+
 /*-------------------------------------------------------------------------------------------
 --------------------------------------HEADER---------------------------------------------
 -------------------------------------------------------------------------------------------*/
@@ -84,10 +109,48 @@ div[class*=__container] {
   margin-top: 15px;
 }
 .header__inner {
-  padding: 10px 10px 10px 20px;
+  padding: 10px 11px 6px 20px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(12, 14, 60, 0.11);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+/*-------------------------------------------------------------------------------------------
+------------------------------------CALCULATE---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+.calculate {
+  margin-bottom: 23.34px;
+}
+.calculate__inner {
+  position: relative;
+  padding: 23px 20px 26px 20px;
+  border-radius: 20.62px;
+  overflow: hidden;
+}
+.calculate__title {
+  font-family: "Stozl bold";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 105%;
+  letter-spacing: -2%;
+  margin-bottom: 11px;
+  max-width: 140px;
+  color: #222e53;
+}
+.calculate__text {
+  font-family: "Stozl book";
+  font-weight: 400;
+  line-height: 125%;
+  font-size: 9px;
+  letter-spacing: -2%;
+  color: #576283;
+  max-width: 100px;
+  margin-bottom: 12px;
+}
+.calculate__car {
+  position: absolute;
+  bottom: -4px;
+  right: -3px;
+  width: 184px;
 }

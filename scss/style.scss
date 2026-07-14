@@ -81,7 +81,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100svh;
   padding-top: env(safe-area-inset-top);
 }
 
@@ -93,6 +93,30 @@ div[class*="__container"] {
   max-width: $xl;
   margin: 0 auto;
   padding: 0px 20px;
+}
+
+._bgi {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-flex;
+  line-height: 31px;
+  padding: 0 15.5px;
+  background: linear-gradient(#6b97d6, #4e7aba);
+  border-radius: 60px;
+  color: #fff;
+  font-size: 6px;
+  text-transform: uppercase;
+  letter-spacing: 8%;
 }
 
 /*-------------------------------------------------------------------------------------------
@@ -108,7 +132,7 @@ div[class*="__container"] {
   }
 
   &__inner {
-    padding: 10px 10px 10px 20px;
+    padding: 10px 11px 6px 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba($color: #0c0e3c, $alpha: 0.11);
     display: flex;
@@ -124,5 +148,66 @@ div[class*="__container"] {
   // .header__notification
 
   &__notification {
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------CALCULATE---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.calculate {
+  // .calculate__container
+  margin-bottom: 23.34px;
+
+  &__inner {
+    position: relative;
+    padding: 23px 20px 26px 20px;
+    border-radius: 20.62px;
+    overflow: hidden;
+  }
+
+  // .calculate__title
+
+  &__title {
+    font-family: $StozlBold;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 105%;
+    letter-spacing: -2%;
+    margin-bottom: 11px;
+    max-width: 140px;
+    color: #222e53;
+  }
+
+  // .calculate__text
+
+  &__text {
+    font-family: $StozlBook;
+    font-weight: 400;
+    line-height: 125%;
+    font-size: 9px;
+    letter-spacing: -2%;
+    color: #576283;
+    max-width: 100px;
+    margin-bottom: 12px;
+  }
+
+  // .calculate__button
+
+  &__button {
+  }
+
+  // .calculate__car
+
+  &__car {
+    position: absolute;
+    bottom: -4px;
+    right: -3px;
+    width: 184px;
+  }
+
+  // .calculate__bg
+
+  &__bg {
   }
 }

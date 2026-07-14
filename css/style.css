@@ -53,9 +53,9 @@ body {
 
 .body {
   font-family: "Stozl medium";
-  font-weight: "";
-  font-size: "";
-  line-height: "";
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 120%;
   color: #576283;
 }
 
@@ -73,5 +73,21 @@ body {
 div[class*=__container] {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0px 20px;
+}
+
+/*-------------------------------------------------------------------------------------------
+--------------------------------------HEADER---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+.header {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.header__inner {
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(12, 14, 60, 0.11);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

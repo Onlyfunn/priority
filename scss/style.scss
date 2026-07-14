@@ -1,0 +1,108 @@
+/*-------------------------------------------------------------------------------------------
+------------------------------------------ЦВЕТА----------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+$mainColor: #576283;
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------------ШРИФТЫ---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: "NTSomic Regular";
+  src: url(../fonts/01_NTSomic-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NTSomic Medium";
+  src: url(../fonts/02_NTSomic-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Uncage";
+  src: url(../fonts/ofont.ru_Uncage.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Stozl bold";
+  src: url(../fonts/stolzl_bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Stozl book";
+  src: url(../fonts/stolzl_book.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Stozl medium";
+  src: url(../fonts/stolzl_medium.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Stozl regular";
+  src: url(../fonts/stolzl_regular.otf);
+  font-weight: 400;
+}
+
+$NTSomicRegulal: "NTSomicRegulal";
+$NTSomicMedium: "NTSomic Medium";
+$Uncage: "Uncage";
+$StozlBold: "Stozl bold";
+$StozlBook: "Stozl book";
+$StozlMedium: "Stozl medium";
+$StozlRegular: "Stozl regular";
+
+/*-------------------------------------------------------------------------------------------
+-----------------------------------------ПЕРЕМЕННЫЕ------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+/*-------------------------------------------------------------------------------------------
+-----------------------------------СТАНДАРТНЫЕ НАСТРОЙКИ-------------------------------------
+-------------------------------------------------------------------------------------------*/
+html,
+body {
+  height: 100%;
+}
+
+.body {
+  font-family: $StozlMedium;
+  font-weight: "";
+  font-size: "";
+  line-height: "";
+  color: $mainColor;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-top: env(safe-area-inset-top);
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+div[class*="__container"] {
+  max-width: $xl;
+  margin: 0 auto;
+  padding: 0px 15px;
+  // @media (max-width: $xl) {
+  //   max-width: $lg;
+  // }
+  // @media (max-width: $lg) {
+  //   max-width: $md;
+  // }
+  // @media (max-width: $md) {
+  //   max-width: $sm;
+  // }
+  // @media (max-width: $sm) {
+  //   max-width: none;
+  // }
+}

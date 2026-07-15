@@ -157,6 +157,14 @@ button:hover {
   width: 85px;
   height: 20px;
 }
+.header__notification {
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.header__notification:hover {
+  color: #d7e7fe;
+}
+
 /*-------------------------------------------------------------------------------------------
 ------------------------------------CALCULATE---------------------------------------------
 -------------------------------------------------------------------------------------------*/
@@ -249,9 +257,10 @@ button:hover {
   display: block;
   min-width: 21px;
   min-height: 22px;
+  color: #eceff6;
 }
-.item-model__arrow:active svg use path {
-  fill: red;
+.item-model__arrow:hover {
+  color: #b9b9b9;
 }
 
 /*-------------------------------------------------------------------------------------------
@@ -513,6 +522,11 @@ button:hover {
 .footer__item:nth-child(3) {
   margin-top: -17px;
   margin-left: 8px;
+  color: #fffffd;
+  transition: all 0.2s ease;
+}
+.footer__item:nth-child(3):hover {
+  color: #eeeeee;
 }
 .footer__item:nth-child(3) use {
   position: relative;
@@ -578,6 +592,10 @@ button:hover {
   line-height: 100%;
   letter-spacing: 8%;
   color: #222e53;
+  transition: all 0.2s ease;
+}
+.news__all:hover {
+  background-color: #ebebeb;
 }
 .swiper-news__slide {
   height: 111px;

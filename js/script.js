@@ -57,6 +57,8 @@ function resizeFooterButton() {
   if (window.innerWidth <= 470) {
     document.getElementById("footer-button").style.transform =
       `scale(${window.innerWidth / 3.3}%)`;
+  } else {
+    document.getElementById("footer-button").style.transform = `scale(140%)`;
   }
   window.addEventListener("resize", () => {
     if (window.innerWidth <= 470) {

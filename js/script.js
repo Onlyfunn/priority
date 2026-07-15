@@ -35,11 +35,11 @@ const swiper = new Swiper(".swiper", {
       animationLine.className = "animation-line";
       if (this.activeIndex > this.previousIndex) {
         animationLine.style.width = `${distance + 7}px`;
-        animationLine.style.left = `${rect2.left - 13 - 7}px`;
+        animationLine.style.left = `${rect2.left - conx - 20}px`;
         animationLine.classList.add("right");
       } else {
         animationLine.style.width = `${distance + 7}px`;
-        animationLine.style.left = `${rect1.left - 13 - 7}px`;
+        animationLine.style.left = `${rect1.left - conx - 20}px`;
         animationLine.classList.add("left");
       }
 
@@ -50,3 +50,18 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+resizeFooterButton();
+
+function resizeFooterButton() {
+  if (window.innerWidth <= 470) {
+    document.getElementById("footer-button").style.transform =
+      `scale(${window.innerWidth / 3.3}%)`;
+  }
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 470) {
+      document.getElementById("footer-button").style.transform =
+        `scale(${window.innerWidth / 3.5}%)`;
+    }
+  });
+}

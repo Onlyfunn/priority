@@ -86,6 +86,7 @@ div[class*=__container] {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0px 20px;
+  max-width: 470px;
 }
 
 ._bgi {
@@ -491,7 +492,7 @@ button:active {
   position: fixed;
   z-index: 100;
   width: 100%;
-  bottom: 15px;
+  bottom: 5%;
 }
 .footer__body {
   padding: 0 20px;
@@ -502,6 +503,9 @@ button:active {
   justify-content: space-around;
   align-items: center;
   position: relative;
+}
+.footer__item {
+  margin-top: 2%;
 }
 .footer__item:not(:nth-child(3)) {
   border-radius: 50%;
@@ -540,7 +544,8 @@ button:active {
   max-width: none;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  width: 110%;
+  margin-left: -5%;
   height: auto;
   margin-top: -5%;
 }

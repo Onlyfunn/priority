@@ -105,6 +105,7 @@ div[class*="__container"] {
   max-width: $xl;
   margin: 0 auto;
   padding: 0px 20px;
+  max-width: 470px;
 }
 
 ._bgi {
@@ -695,7 +696,7 @@ button {
   position: fixed;
   z-index: 100;
   width: 100%;
-  bottom: 15px;
+  bottom: 5%;
 
   // .footer__container
 
@@ -718,6 +719,8 @@ button {
   // .footer__item
 
   &__item {
+    margin-top: 2%;
+
     &:nth-child(1) {
     }
     &:not(:nth-child(3)) {
@@ -726,6 +729,7 @@ button {
     &:nth-child(3) {
       margin-top: -17px;
       margin-left: 8px;
+
       use {
         position: relative;
         &:before {
@@ -757,7 +761,8 @@ button {
   &__bg {
     max-width: none;
     object-fit: cover;
-    width: 100%;
+    width: 110%;
+    margin-left: -5%;
     height: auto;
     margin-top: -5%;
   }

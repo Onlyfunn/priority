@@ -510,6 +510,20 @@ button:active {
   margin-top: -17px;
   margin-left: 8px;
 }
+.footer__item:nth-child(3) use {
+  position: relative;
+}
+.footer__item:nth-child(3) use:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
 .footer__item:nth-child(2) {
   position: relative;
   left: 13px;

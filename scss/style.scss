@@ -150,7 +150,7 @@ div[class*="__container"] {
 a,
 button {
   transition: all 0.2s ease;
-  &:active {
+  &:hover {
     transform: scale(1.05);
   }
 }

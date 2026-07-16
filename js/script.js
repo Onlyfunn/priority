@@ -75,21 +75,6 @@ function resizeFooterButton() {
 let markSelected = false;
 showModels();
 
-document.addEventListener("click", function (e) {
-  if (!e.target.closest(".models-search__model")) {
-    clickOutModels();
-  }
-  if (e.target.closest(".date-search__header")) {
-    showDate(e);
-  }
-  if (!e.target.closest(".date-search__header")) {
-    clickOutDate();
-  }
-  if (e.target.closest(".date-search__choice")) {
-    clickOnDate(e);
-  }
-});
-
 function clickOutModels() {
   const modelsSearchHeaders = document.querySelectorAll(
     ".models-search__header",
@@ -179,3 +164,25 @@ function clickOnDate(e) {
       <use href="./img/sprite.svg#arrow3"></use>
      </svg>`;
 }
+
+/*-------------------------------------------------------------------------------------------
+-------------------------------------SELECTED--------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".models-search__model")) {
+    clickOutModels();
+  }
+  if (e.target.closest(".date-search__header")) {
+    showDate(e);
+  }
+  if (!e.target.closest(".date-search__header")) {
+    clickOutDate();
+  }
+  if (e.target.closest(".date-search__choice")) {
+    clickOnDate(e);
+  }
+  if (e.target.closest(".selected-search__cross")) {
+    e.target.closest(".selected-search__cross").parentElement.remove();
+  }
+});

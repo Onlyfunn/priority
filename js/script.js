@@ -67,3 +67,115 @@ function resizeFooterButton() {
     }
   });
 }
+
+/*-------------------------------------------------------------------------------------------
+-------------------------------------MODELS---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+let markSelected = false;
+showModels();
+
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".models-search__model")) {
+    clickOutModels();
+  }
+  if (e.target.closest(".date-search__header")) {
+    showDate(e);
+  }
+  if (!e.target.closest(".date-search__header")) {
+    clickOutDate();
+  }
+  if (e.target.closest(".date-search__choice")) {
+    clickOnDate(e);
+  }
+});
+
+function clickOutModels() {
+  const modelsSearchHeaders = document.querySelectorAll(
+    ".models-search__header",
+  );
+  modelsSearchHeaders.forEach((element, index) => {
+    element.nextElementSibling.classList.remove("_show");
+    let modelsSearchHeaderValues = [];
+    const modelsChoices = element.nextElementSibling.querySelectorAll(
+      ".models-search__choice input",
+    );
+    markSelected = false;
+    let count = 0;
+    modelsChoices.forEach((element) => {
+      if (element.checked) {
+        modelsSearchHeaderValues.push(element.parentElement.textContent.trim());
+
+        count += 1;
+      }
+    });
+    if (modelsSearchHeaderValues.join(", ").length >= 26) {
+      element.value = modelsSearchHeaderValues.join(", ").slice(0, 26) + "...";
+    } else {
+      element.value = modelsSearchHeaderValues.join(", ");
+    }
+    if (count > 0) {
+      markSelected = true;
+      if (index === 0) {
+        modelsSearchHeaders[1].parentElement.classList.remove("_block");
+        modelsSearchHeaders[1].placeholder = "Model1, Model2, Model3, Mo...";
+      }
+    } else {
+      if (index === 0) {
+        modelsSearchHeaders[1].parentElement.classList.add("_block");
+        modelsSearchHeaders[1].placeholder = "В начале выберите марку";
+      }
+    }
+  });
+}
+function showModels() {
+  const modelsSearchHeaders = document.querySelectorAll(
+    ".models-search__header",
+  );
+
+  if (!modelsSearchHeaders) return;
+
+  modelsSearchHeaders.forEach((element) => {
+    element.addEventListener("focus", function (e) {
+      modelsSearchHeaders.forEach((element) => {
+        element.nextElementSibling.classList.remove("_show");
+      });
+      element.nextElementSibling.classList.add("_show");
+    });
+    element.addEventListener("blur", function (e) {});
+  });
+}
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------DATE---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+function showDate(e) {
+  const dateSearchHeaders = document.querySelectorAll(".date-search__header");
+  dateSearchHeaders.forEach((element) => {
+    if (element != e.target.closest(".date-search__header")) {
+      element.nextElementSibling.classList.remove("_show");
+    }
+  });
+  e.target
+    .closest(".date-search__header")
+    .nextElementSibling.classList.toggle("_show");
+}
+
+function clickOutDate() {
+  const dateSearchHeaders = document.querySelectorAll(".date-search__header");
+  dateSearchHeaders.forEach((element) => {
+    element.nextElementSibling.classList.remove("_show");
+  });
+}
+
+function clickOnDate(e) {
+  e.target.closest(
+    ".date-search__choice",
+  ).parentElement.previousElementSibling.innerHTML = `${e.target
+    .closest(".date-search__choice")
+    .textContent.trim()} 
+    <svg class="date-search__arrow" width="9px" height="6px">
+      <use href="./img/sprite.svg#arrow3"></use>
+     </svg>`;
+}

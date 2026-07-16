@@ -1,55 +1,56 @@
 "use strict";
+if (typeof Swiper !== "undefined") {
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: false,
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: false,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-news__pagination",
-    clickable: true,
-  },
-
-  spaceBetween: 10,
-  slidesPerView: 1,
-
-  on: {
-    slideChange: function () {
-      const bullets = document.querySelectorAll(".swiper-pagination-bullet");
-      const pagination = document.querySelector(".swiper-news__pagination");
-      const container = document.querySelector('[class*="__container"]');
-      let conx = container.getBoundingClientRect().left;
-
-      let el1 = bullets[this.activeIndex];
-      let el2 = bullets[this.previousIndex];
-
-      let rect1 = el1.getBoundingClientRect();
-      let rect2 = el2.getBoundingClientRect();
-
-      let dx = rect1.left - rect2.left;
-
-      let distance = Math.abs(dx);
-
-      let animationLine = document.createElement("div");
-      animationLine.className = "animation-line";
-      if (this.activeIndex > this.previousIndex) {
-        animationLine.style.width = `${distance + 7}px`;
-        animationLine.style.left = `${rect2.left - conx - 20}px`;
-        animationLine.classList.add("right");
-      } else {
-        animationLine.style.width = `${distance + 7}px`;
-        animationLine.style.left = `${rect1.left - conx - 20}px`;
-        animationLine.classList.add("left");
-      }
-
-      pagination.appendChild(animationLine);
-      setTimeout(() => {
-        animationLine.remove();
-      }, 490);
+    // If we need pagination
+    pagination: {
+      el: ".swiper-news__pagination",
+      clickable: true,
     },
-  },
-});
+
+    spaceBetween: 10,
+    slidesPerView: 1,
+
+    on: {
+      slideChange: function () {
+        const bullets = document.querySelectorAll(".swiper-pagination-bullet");
+        const pagination = document.querySelector(".swiper-news__pagination");
+        const container = document.querySelector('[class*="__container"]');
+        let conx = container.getBoundingClientRect().left;
+
+        let el1 = bullets[this.activeIndex];
+        let el2 = bullets[this.previousIndex];
+
+        let rect1 = el1.getBoundingClientRect();
+        let rect2 = el2.getBoundingClientRect();
+
+        let dx = rect1.left - rect2.left;
+
+        let distance = Math.abs(dx);
+
+        let animationLine = document.createElement("div");
+        animationLine.className = "animation-line";
+        if (this.activeIndex > this.previousIndex) {
+          animationLine.style.width = `${distance + 7}px`;
+          animationLine.style.left = `${rect2.left - conx - 20}px`;
+          animationLine.classList.add("right");
+        } else {
+          animationLine.style.width = `${distance + 7}px`;
+          animationLine.style.left = `${rect1.left - conx - 20}px`;
+          animationLine.classList.add("left");
+        }
+
+        pagination.appendChild(animationLine);
+        setTimeout(() => {
+          animationLine.remove();
+        }, 490);
+      },
+    },
+  });
+}
 
 resizeFooterButton();
 
@@ -166,8 +167,29 @@ function clickOnDate(e) {
 }
 
 /*-------------------------------------------------------------------------------------------
--------------------------------------SELECTED--------------------------------------------
+-------------------------------------POLITIC--------------------------------------------
 -------------------------------------------------------------------------------------------*/
+
+function showPolitic(e) {
+  const politicBodies = document.querySelectorAll(".politic__body");
+
+  if (
+    e.target
+      .closest(".politic__header")
+      .parentElement.classList.contains("_show")
+  ) {
+    e.target.closest(".politic__header").nextElementSibling.style.maxHeight =
+      `${0}px`;
+  } else {
+    politicBodies.forEach((element) => {
+      element.parentElement.classList.remove("_show");
+      element.style.maxHeight = `${0}px`;
+    });
+    e.target.closest(".politic__header").nextElementSibling.style.maxHeight =
+      `${e.target.closest(".politic__header").nextElementSibling.scrollHeight + 10}px`;
+  }
+  e.target.closest(".politic__header").parentElement.classList.toggle("_show");
+}
 
 document.addEventListener("click", function (e) {
   if (!e.target.closest(".models-search__model")) {
@@ -185,4 +207,20 @@ document.addEventListener("click", function (e) {
   if (e.target.closest(".selected-search__cross")) {
     e.target.closest(".selected-search__cross").parentElement.remove();
   }
+  if (e.target.closest(".politic__header")) {
+    showPolitic(e);
+  }
+  if (!e.target.closest(".politic__header")) {
+    const politicBodies = document.querySelectorAll(".politic__body");
+    politicBodies.forEach((element) => {
+      element.parentElement.classList.remove("_show");
+      element.style.maxHeight = `${0}px`;
+    });
+  }
 });
+
+if (typeof IMask !== "undefined") {
+  IMask(document.getElementById("phone"), {
+    mask: "+{7} (000) 000-00-00",
+  });
+}

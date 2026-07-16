@@ -62,5 +62,33 @@
 </defs>
 </symbol>
 
+<symbol id="politic-icon-1" width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="19.5" cy="19.5" r="18.8906" fill="white" stroke="#EFEFEF" stroke-width="1.21875"/>
+<circle cx="19.5" cy="19.5" r="18.8906" fill="white" stroke="#EFEFEF" stroke-width="1.21875"/>
+<path d="M17.5459 19.8737L18.7647 21.2387L21.8115 17.8262" stroke="#3A61BB" stroke-width="1.59961" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 18.1805C12 15.4525 12 14.0885 12.3221 13.6297C12.6441 13.1708 13.9266 12.7318 16.4916 11.8538L16.9803 11.6865C18.3174 11.2288 18.9859 11 19.6781 11C20.3703 11 21.0388 11.2288 22.3759 11.6865L22.8646 11.8538C25.4296 12.7318 26.7121 13.1708 27.0342 13.6297C27.3562 14.0885 27.3562 15.4525 27.3562 18.1805C27.3562 18.5924 27.3562 19.0393 27.3562 19.5239C27.3562 21.6609 26.6423 23.3092 25.65 24.5681M12.1645 21.2375C12.896 24.9045 15.9042 26.7938 17.8853 27.6592C18.5008 27.928 18.8085 28.0625 19.6781 28.0625C20.5477 28.0625 20.8554 27.928 21.4709 27.6592C21.9641 27.4437 22.521 27.1648 23.0906 26.8107" stroke="#3A61BB" stroke-width="1.59961" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="politic-icon-2" width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="19.5" cy="19.5" r="19.5" fill="#DFE7F6"/>
+<path d="M16.8332 19.5H17.6249M23.1665 19.5H19.9999" stroke="#496EC8" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M23.1665 16.3332H22.3749M19.9999 16.3332H16.8332" stroke="#496EC8" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M16.8332 22.6668H20.7915" stroke="#496EC8" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12.875 21.0832V17.9165C12.875 14.931 12.875 13.4382 13.8025 12.5107C14.73 11.5832 16.2228 11.5832 19.2083 11.5832H20.7917C23.7772 11.5832 25.27 11.5832 26.1975 12.5107C26.7146 13.0278 26.9434 13.7206 27.0446 14.7499M27.125 17.9165V21.0832C27.125 24.0687 27.125 25.5616 26.1975 26.489C25.27 27.4165 23.7772 27.4165 20.7917 27.4165H19.2083C16.2228 27.4165 14.73 27.4165 13.8025 26.489C13.2854 25.9719 13.0566 25.2791 12.9553 24.2499" stroke="#496EC8" stroke-width="1.5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="politic-icon-3" width="28" height="28" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<circle cx="14" cy="14" r="14" fill="currentColor"/>
+<g clip-path="url(#clip0_70_140)">
+<path d="M11.9998 19H15.9998C17.414 19 18.1211 19 18.5604 18.5607C18.9998 18.1214 18.9998 17.4142 18.9998 16V15.5C18.9998 14.0858 18.9998 13.3787 18.5604 12.9394C18.1762 12.5552 17.5873 12.507 16.4998 12.5009M11.4998 12.5009C10.4122 12.507 9.82329 12.5552 9.4391 12.9394C8.99976 13.3787 8.99976 14.0858 8.99976 15.5V16C8.99976 17.4142 8.99976 18.1214 9.4391 18.5607C9.589 18.7106 9.77007 18.8093 9.99976 18.8744" stroke="#496EC8" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M13.9995 9.00012V15.5001M15.4995 13.7501L13.9995 15.5001L12.4995 13.7501" stroke="#496EC8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_70_140">
+<rect width="12" height="12" fill="white" transform="translate(8 8)"/>
+</clipPath>
+</defs>
+</symbol>
+
 
 </svg>

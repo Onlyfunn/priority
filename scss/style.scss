@@ -87,7 +87,7 @@ body {
 }
 
 .save-place {
-  padding-top: max(20px, env(safe-area-inset-top));
+  padding-top: 1px;
   position: fixed;
   z-index: 100;
   top: 0;

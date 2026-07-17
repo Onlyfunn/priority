@@ -83,11 +83,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding-top: max(20px, env(safe-area-inset-top));
+  padding-top: 10px;
 }
 
 .save-place {
-  padding-top: max(20px, env(safe-area-inset-top));
+  padding-top: 10px;
   position: fixed;
   z-index: 100;
   top: 0;
